@@ -1,7 +1,11 @@
+import Header from "./components/header";
+
 export default function Home() {
   return (
     <>
-      <div className=""></div>
+      <div className="">
+        <Header />
+      </div>
     </>
   );
 }
