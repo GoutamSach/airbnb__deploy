@@ -8,8 +8,8 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 function Header() {
   return (
-    <header>
-      <div className="  grid grid-cols-3 px-4 shadow-md  ">
+    <header className="">
+      <div className="  sticky top-0  z-100 grid grid-cols-3 px-4 shadow-md  ">
         {/* start header */}
         <div className="flex flex-row ">
           <Image
@@ -22,7 +22,7 @@ function Header() {
           />
         </div>
         {/* Mid Header */}
-        <div className=" flex sm:border sm:rounded-full sm:border-2 sm:border-gray-300 px-2  items-center my-3 hover:shadow-md  focus-within:shadow-md">
+        <div className=" flex sm:border sm:rounded-full sm:border-2 sm:border-gray-300 px-2  items-center my-3 hover:shadow-md  focus-within:shadow-md ">
           <input
             type="text"
             placeholder="Start your search"
@@ -32,7 +32,7 @@ function Header() {
         </div>
         {/* right header */}
         <div className=" flex flex-row items-center space-x-2 justify-end ">
-          <div className="hover:bg-gray-100 rounded-full px-3 py-2 active:scale-95">
+          <div className="hover:bg-gray-100 rounded-full hover:px-3 hover:py-2 active:scale-95">
             <p className=" cursor-pointer text-gray-700  hidden md:inline-flex pr-2 ">
               Become a host
             </p>
