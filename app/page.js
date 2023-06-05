@@ -8,6 +8,10 @@ export default function Home() {
         <Header />
         <Banner />
       </div>
+      {/* Main */}
+
+      {/* { {data?.map((item) => ((<h1>{item.location}</h1>))
+      )} } */}
     </>
   );
 }
