@@ -11,7 +11,7 @@ function Banner() {
             Not sure where to go? Perfect.
           </p>
           <button className=" text-sm sm:text-lg  text-violet-500 mt-4 bg-white rounded-full font-bold px-5 py-3 shadow-md hover:shadow-lg active:scale-95  transition duration-150">
-            I<q />m flexible
+            I&apos;m flexible
           </button>
         </div>
       </div>
