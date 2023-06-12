@@ -2,6 +2,7 @@ import Banner from "./components/Banner";
 import LargeCard from "./components/LargeCard";
 import MediumCard from "./components/MediumCard";
 import SmallCard from "./components/SmallCard";
+import Footer from "./components/footer";
 
 import Header from "./components/header";
 
@@ -34,20 +35,21 @@ export default async function Home() {
       </div>
       {/* MediumCardSection */}
       <section className="  max-w-7xl mx-auto mt-5   pb-5  ">
-        <h2 className="  text-2xl font-bold ml-5">Live Anywhere</h2>
-        <div className=" relative flex flex-row space-x-3 overflow-scroll scrollbar-hide ml-5 mr-5">
+        <h2 className=" text-2xl font-bold ml-5">Live Anywhere</h2>
+        <div className="  relative flex flex-row space-x-3 overflow-scroll scrollbar-hide pl-5">
           {data22?.map((item) => (
             <MediumCard img={item.img} key={item.id} title={item.title} />
           ))}
         </div>
       </section>
-      <div className="max-w-7xl mx-auto  ">
+      <div className="max-w-7xl mx-auto pl-5 pr-5 lg:pr-10 ">
         <LargeCard
           title={"The Greatest Outdoors"}
           description={"Wishlists curated by Airbnb."}
           buttonText={"Get Inspired"}
         />
       </div>
+      <Footer />
     </>
   );
 }

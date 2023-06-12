@@ -2,13 +2,13 @@ import React from "react";
 import Image from "next/image";
 function MediumCard({ img, title }) {
   return (
-    <div className=" flex flex-col mt-5  hover:scale-105 transform transition duration-200  cursor-pointer ">
+    <div className=" flex flex-col mt-5  hover:scale-105 transform transition duration-200  cursor-pointer  lg:flex-1  ">
       <div className=" relative  w-64  h-64">
         <Image
           src={img}
           fill
           alt="small cards"
-          sizes="100vh"
+          sizes="fill"
           className="rounded-lg "
         />
       </div>
