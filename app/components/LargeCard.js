@@ -9,6 +9,7 @@ function LargeCard({ title, description, buttonText }) {
           src={"https://links.papareact.com/4cj"}
           className=" rounded-xl "
           fill
+          alt="Large card"
         />{" "}
         <div className="top-12 absolute  left-14">
           <h2 className="  text-xl  sm:text-2xl   w-32 font-semibold">

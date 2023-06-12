@@ -1,14 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import SmallCard from "./SmallCard";
-// import { Fullscreen } from "@mui/icons-material";
 
-async function Banner() {
-  const url = `https://www.jsonkeeper.com/b/IJK5`;
-  const res = await fetch(url);
-  const data = await res.json();
-  const data1 = data;
-
+function Banner() {
   return (
     <div className="  ">
       <div className="relative  object-cover h-[300px] sm:h-[300px] md:h-[400px]  lg:h-[500px] xl:h-[600px] 2xl:h-[700px] ">
