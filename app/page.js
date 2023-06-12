@@ -2,7 +2,7 @@ import Banner from "./components/Banner";
 import LargeCard from "./components/LargeCard";
 import MediumCard from "./components/MediumCard";
 import SmallCard from "./components/SmallCard";
-import Footer from "./components/footer";
+import Footer from "./components/Footers";
 
 import Header from "./components/header";
 
@@ -49,7 +49,9 @@ export default async function Home() {
           buttonText={"Get Inspired"}
         />
       </div>
-      <Footer />
+      <div className=" ">
+        <Footer />
+      </div>
     </>
   );
 }

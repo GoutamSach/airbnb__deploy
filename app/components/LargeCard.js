@@ -17,7 +17,7 @@ function LargeCard({ title, description, buttonText }) {
           <p className="    text-xs  sm:text-lg  mt-2  w-42  font-medium ">
             {description}
           </p>
-          <button className=" rounded-md sm:text-lg text-xs px-3 py-2  bg-black   text-white cursor-pointer  mt-4 text-sm ">
+          <button className=" active:scale-95 transform duration-150 rounded-md sm:text-lg text-xs px-3 py-2  bg-black   text-white cursor-pointer  mt-4 text-sm ">
             {buttonText}
           </button>
         </div>
