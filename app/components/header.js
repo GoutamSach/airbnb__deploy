@@ -10,7 +10,8 @@ import "react-date-range/dist/theme/default.css"; // theme css file
 import { DateRangePicker } from "react-date-range";
 import { DateRange } from "react-date-range";
 import PeopleIcon from "@mui/icons-material/People";
-import { usePathname, useRouter } from "next/navigation";
+import {  useRouter } from "next/navigation";
+import Link from 'next/link';
 
 function Header() {
   const [searchInput, setSearchInput] = useState("");
@@ -18,7 +19,7 @@ function Header() {
   const [endDate, setendDate] = useState(new Date());
   const [noOfGuests, setnoOfGuests] = useState(1);
   const router = useRouter();
-  // const pathname = usePathname();
+ const searchTheData =()=>{ }
 
   const handleSelect = (ranges) => {
     setstartDate(ranges.selection.startDate);
@@ -37,13 +38,13 @@ function Header() {
   return (
     <header className="">
       <div
-        onClick={() => {
-          router.push("/");
-        }}
+        
         className="  sticky top-0  z-100 grid grid-cols-3 px-2 sm:px-4 shadow-md  "
       >
         {/* start header */}
-        <div className=" w-20 sm:w-28 lg:w-32  ">
+        <div onClick={() => {
+          router.push("/");
+        }} className=" w-20 sm:w-28 lg:w-32  ">
           <Image
             src="/Airbnb-logo.png"
             alt="large tag"
@@ -55,14 +56,14 @@ function Header() {
         </div>
         {/* Mid Header */}
         <div className=" flex sm:border sm:rounded-full sm:border-2 sm:border-gray-300 px-2  items-center my-3 hover:shadow-md  focus-within:shadow-md ">
-          <input
+          <input 
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
             type="text"
             placeholder="Start your search"
             className="mr-2   sm:ml-0  -ml-1 text-xs  sm:text-sm  md:text-l w-24 focus:outline-none cursor-pointer bg-transparent  flex-grow"
-          />
-          <SearchIcon className=" bg-red-400  text-white  rounded-full p-1 hidden  sm:inline-flex cursor-pointer" />
+          />{searchInput &&(<Link href={'/search'}>
+          <SearchIcon className=" bg-red-400  text-white  rounded-full p-1 hidden  sm:inline-flex cursor-pointer" /></Link>)}
         </div>
 
         {/* right header */}
@@ -120,12 +121,12 @@ function Header() {
               >
                 Cancel
               </button>
-              <button
-                onClick={() => router.push("/search")}
-                className=" text-red-400 text-sm md:text-md  active:scale-110 transform duration-150  hover:bg-red-400 hover:text-white px-5 py-2 rounded-full"
-              >
-                Search
+              
+              <Link href={'/search'}>
+              <button  onClick={searchTheData}  className=" text-red-400 text-sm md:text-md  active:scale-110 transform duration-150  hover:bg-red-400 hover:text-white px-5 py-2 rounded-full">
+              Search
               </button>
+              </Link>
             </div>
           </div>
         )}
