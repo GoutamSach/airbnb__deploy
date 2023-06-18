@@ -10,16 +10,20 @@ import "react-date-range/dist/theme/default.css"; // theme css file
 import { DateRangePicker } from "react-date-range";
 import { DateRange } from "react-date-range";
 import PeopleIcon from "@mui/icons-material/People";
-import {  useRouter } from "next/navigation";
+import {  usePathname, useRouter } from "next/navigation";
 import Link from 'next/link';
 
-function Header() {
+function Header({placeholder}) {
   const [searchInput, setSearchInput] = useState("");
   const [startDate, setstartDate] = useState(new Date());
   const [endDate, setendDate] = useState(new Date());
   const [noOfGuests, setnoOfGuests] = useState(1);
   const router = useRouter();
- const searchTheData =()=>{ }
+  // const pathnames = usePathname();
+  
+// console.log(<Link pathname/>);
+
+
 
   const handleSelect = (ranges) => {
     setstartDate(ranges.selection.startDate);
@@ -34,6 +38,14 @@ function Header() {
     endDate: endDate,
     key: "selection",
   };
+//    const searchTheData =()=>{
+    
+//     router.push({pathnames:'/search',query:{ location:searchInput,
+//     startDate: startDate.toISOString() }})
+ 
+ 
+  
+// } 
 
   return (
     <header className="">
@@ -60,9 +72,11 @@ function Header() {
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
             type="text"
-            placeholder="Start your search"
+            placeholder= {placeholder || "Start your search"}
             className="mr-2   sm:ml-0  -ml-1 text-xs  sm:text-sm  md:text-l w-24 focus:outline-none cursor-pointer bg-transparent  flex-grow"
-          />{searchInput &&(<Link href={'/search'}>
+          />{searchInput &&(<Link href={{pathname: "/search",
+          query: {locations:searchInput, startDate: startDate.toISOString(), endDate:endDate.toISOString(),noOfGuests:noOfGuests}
+           }}>
           <SearchIcon className=" bg-red-400  text-white  rounded-full p-1 hidden  sm:inline-flex cursor-pointer" /></Link>)}
         </div>
 
@@ -122,11 +136,13 @@ function Header() {
                 Cancel
               </button>
               
-              <Link href={'/search'}>
-              <button  onClick={searchTheData}  className=" text-red-400 text-sm md:text-md  active:scale-110 transform duration-150  hover:bg-red-400 hover:text-white px-5 py-2 rounded-full">
+              <Link href={{pathname: "/search",
+ query: {locations:searchInput, startDate: startDate.toISOString(), endDate:endDate.toISOString(),noOfGuests:noOfGuests}
+  }}> 
+              <button       className=" text-red-400 text-sm md:text-md  active:scale-110 transform duration-150  hover:bg-red-400 hover:text-white px-5 py-2 rounded-full">
               Search
               </button>
-              </Link>
+              </Link> 
             </div>
           </div>
         )}
