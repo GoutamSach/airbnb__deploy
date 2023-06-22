@@ -26,9 +26,7 @@ async function Search() {
   const days = `${formatStartDate} - ${formatEndDate}`;
 
   const resultsss = await searchRes();
-  // console.log(resultsss);
 
-  // const {location, startDate, endDate, noOfGuests}=Link.query;
   return (
     <div>
       <Header
@@ -71,7 +69,7 @@ async function Search() {
               total,
             }) => (
               <InfoCard
-                key={key}
+                key={total}
                 img={img}
                 location={location}
                 title={title}

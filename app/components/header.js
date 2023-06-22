@@ -155,7 +155,10 @@ function Header({ placeholder }) {
                   },
                 }}
               >
-                <button className=" text-red-400 text-sm md:text-md  active:scale-110 transform duration-150  hover:bg-red-400 hover:text-white px-5 py-2 rounded-full">
+                <button
+                  onClick={resetInputField}
+                  className=" text-red-400 text-sm md:text-md  active:scale-110 transform duration-150  hover:bg-red-400 hover:text-white px-5 py-2 rounded-full"
+                >
                   Search
                 </button>
               </Link>
