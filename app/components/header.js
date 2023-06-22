@@ -10,7 +10,7 @@ import "react-date-range/dist/theme/default.css"; // theme css file
 import { DateRangePicker } from "react-date-range";
 import { DateRange } from "react-date-range";
 import PeopleIcon from "@mui/icons-material/People";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 function Header({ placeholder }) {

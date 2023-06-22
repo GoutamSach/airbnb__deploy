@@ -1,13 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
-import ProgressBar from "@badrap/bar-of-progress";
-import { Router } from "next/router";
 
-const progress = new ProgressBar({
-  size: 4,
-  color: "#FE595E",
-  className: "z-100",
-});
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
