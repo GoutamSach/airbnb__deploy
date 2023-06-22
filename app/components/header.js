@@ -10,20 +10,18 @@ import "react-date-range/dist/theme/default.css"; // theme css file
 import { DateRangePicker } from "react-date-range";
 import { DateRange } from "react-date-range";
 import PeopleIcon from "@mui/icons-material/People";
-import {  usePathname, useRouter } from "next/navigation";
-import Link from 'next/link';
+import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
 
-function Header({placeholder}) {
+function Header({ placeholder }) {
   const [searchInput, setSearchInput] = useState("");
   const [startDate, setstartDate] = useState(new Date());
   const [endDate, setendDate] = useState(new Date());
   const [noOfGuests, setnoOfGuests] = useState(1);
   const router = useRouter();
   // const pathnames = usePathname();
-  
-// console.log(<Link pathname/>);
 
-
+  // console.log(<Link pathname/>);
 
   const handleSelect = (ranges) => {
     setstartDate(ranges.selection.startDate);
@@ -38,25 +36,23 @@ function Header({placeholder}) {
     endDate: endDate,
     key: "selection",
   };
-//    const searchTheData =()=>{
-    
-//     router.push({pathnames:'/search',query:{ location:searchInput,
-//     startDate: startDate.toISOString() }})
- 
- 
-  
-// } 
+  //    const searchTheData =()=>{
+
+  //     router.push({pathnames:'/search',query:{ location:searchInput,
+  //     startDate: startDate.toISOString() }})
+
+  // }
 
   return (
     <header className="">
-      <div
-        
-        className="  sticky top-0  z-100 grid grid-cols-3 px-2 sm:px-4 shadow-md  "
-      >
+      <div className="  sticky top-0  z-100 grid grid-cols-3 px-2 sm:px-4 shadow-md  ">
         {/* start header */}
-        <div onClick={() => {
-          router.push("/");
-        }} className=" w-20 sm:w-28 lg:w-32  ">
+        <div
+          onClick={() => {
+            router.push("/");
+          }}
+          className=" w-20 sm:w-28 lg:w-32  "
+        >
           <Image
             src="/Airbnb-logo.png"
             alt="large tag"
@@ -68,16 +64,28 @@ function Header({placeholder}) {
         </div>
         {/* Mid Header */}
         <div className=" flex sm:border sm:rounded-full sm:border-2 sm:border-gray-300 px-2  items-center my-3 hover:shadow-md  focus-within:shadow-md ">
-          <input 
+          <input
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
             type="text"
-            placeholder= {placeholder || "Start your search"}
+            placeholder={placeholder || "Start your search"}
             className="mr-2   sm:ml-0  -ml-1 text-xs  sm:text-sm  md:text-l w-24 focus:outline-none cursor-pointer bg-transparent  flex-grow"
-          />{searchInput &&(<Link href={{pathname: "/search",
-          query: {locations:searchInput, startDate: startDate.toISOString(), endDate:endDate.toISOString(),noOfGuests:noOfGuests}
-           }}>
-          <SearchIcon className=" bg-red-400  text-white  rounded-full p-1 hidden  sm:inline-flex cursor-pointer" /></Link>)}
+          />
+          {searchInput && (
+            <Link
+              href={{
+                pathname: "/search",
+                query: {
+                  locations: searchInput,
+                  startDate: startDate.toISOString(),
+                  endDate: endDate.toISOString(),
+                  noOfGuests: noOfGuests,
+                },
+              }}
+            >
+              <SearchIcon className=" bg-red-400  text-white  rounded-full p-1 hidden  sm:inline-flex cursor-pointer" />
+            </Link>
+          )}
         </div>
 
         {/* right header */}
@@ -135,14 +143,22 @@ function Header({placeholder}) {
               >
                 Cancel
               </button>
-              
-              <Link href={{pathname: "/search",
- query: {locations:searchInput, startDate: startDate.toISOString(), endDate:endDate.toISOString(),noOfGuests:noOfGuests}
-  }}> 
-              <button       className=" text-red-400 text-sm md:text-md  active:scale-110 transform duration-150  hover:bg-red-400 hover:text-white px-5 py-2 rounded-full">
-              Search
-              </button>
-              </Link> 
+
+              <Link
+                href={{
+                  pathname: "/search",
+                  query: {
+                    locations: searchInput,
+                    startDate: startDate.toISOString(),
+                    endDate: endDate.toISOString(),
+                    noOfGuests: noOfGuests,
+                  },
+                }}
+              >
+                <button className=" text-red-400 text-sm md:text-md  active:scale-110 transform duration-150  hover:bg-red-400 hover:text-white px-5 py-2 rounded-full">
+                  Search
+                </button>
+              </Link>
             </div>
           </div>
         )}
