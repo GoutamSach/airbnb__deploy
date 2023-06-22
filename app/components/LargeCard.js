@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function LargeCard({ title, description, buttonText }) {
   return (
-    <section className=" relative ">
+    <section className="relative   ">
       <div className="lg:h-96 h-64 mb-5 w-32 max-w-3xl">
         <Image
           src={"https://links.papareact.com/4cj"}
