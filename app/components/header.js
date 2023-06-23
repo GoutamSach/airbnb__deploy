@@ -83,7 +83,7 @@ function Header({ placeholder }) {
                 },
               }}
             >
-              <SearchIcon className=" bg-red-400 hidden sm:inline-block  text-white  rounded-full p-1 hidden  md:inline-flex cursor-pointer" />
+              <SearchIcon className=" bg-red-400    text-white  rounded-full p-1 hidden  md:inline-flex cursor-pointer" />
             </Link>
           )}
         </div>
