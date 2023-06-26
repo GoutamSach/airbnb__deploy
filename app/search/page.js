@@ -7,13 +7,13 @@ import { format } from "date-fns";
 import InfoCard from "../components/InfoCard";
 import Image from "next/image";
 
-const searchRes = async () => {
-  const resultss = await fetch("https://www.jsonkeeper.com/b/YVMX");
-  const resultsss = await resultss.json();
-  return resultsss;
-};
+export default async function searchRes() {
+  // const resultss = await fetch("https://www.jsonkeeper.com/b/YVMX");
+  // const resultsss = await resultss.json();
+  // return resultsss;
+// };
 
-async function Search() {
+// async function Search() {
   // const results = await resultss.json();
 
   const searchParams = useSearchParams();
@@ -25,7 +25,7 @@ async function Search() {
   const formatEndDate = format(new Date(endDate), "dd MMMM");
   const days = `${formatStartDate} - ${formatEndDate}`;
 
-  const resultsss = await searchRes();
+  // const resultsss = await searchRes();
 
   return (
     <div>
@@ -57,7 +57,7 @@ async function Search() {
           </button>
         </div>
         <div className=" ">
-          {resultsss?.map(
+          {/* {resultsss?.map(
             ({
               img,
               key,
@@ -79,7 +79,7 @@ async function Search() {
                 total={total}
               />
             )
-          )}
+          )} */}
         </div>
       </main>
       <Footer />
@@ -87,7 +87,7 @@ async function Search() {
   );
 }
 
-export default Search;
+// export default Search;
 
 // https://jsonkeeper.com/b/Z5I9
 // for indian currency https://www.jsonkeeper.com/b/YVMX
