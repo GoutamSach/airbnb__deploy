@@ -7,14 +7,19 @@ import { format } from "date-fns";
 import InfoCard from "../components/InfoCard";
 import Image from "next/image";
 
-export default async function searchRes() {
-  // const resultss = await fetch("https://www.jsonkeeper.com/b/YVMX");
-  // const resultsss = await resultss.json();
-  // return resultsss;
+
+// export default async function searchRes() {
+
 // };
 
-// async function Search() {
-  // const results = await resultss.json();
+// const searchRes = async () => {
+//   const resultss = await fetch("https://www.jsonkeeper.com/b/YVMX");
+//   const resultsss = await resultss.json();
+//   return resultsss;
+// };
+
+ export default async function Search() {
+  // const resultsss = await searchRes();
 
   const searchParams = useSearchParams();
   const locations = searchParams.get("locations");
@@ -24,6 +29,11 @@ export default async function searchRes() {
   const formatStartDate = format(new Date(startDate), "dd MMMM");
   const formatEndDate = format(new Date(endDate), "dd MMMM");
   const days = `${formatStartDate} - ${formatEndDate}`;
+
+
+    const resultss = await fetch("https://www.jsonkeeper.com/b/YVMX");
+  const resultsss = await resultss.json();
+  
 
   // const resultsss = await searchRes();
 
@@ -57,7 +67,7 @@ export default async function searchRes() {
           </button>
         </div>
         <div className=" ">
-          {/* {resultsss?.map(
+          {resultsss?.map(
             ({
               img,
               key,
@@ -79,7 +89,7 @@ export default async function searchRes() {
                 total={total}
               />
             )
-          )} */}
+          )}
         </div>
       </main>
       <Footer />
