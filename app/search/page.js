@@ -18,6 +18,7 @@ import Image from "next/image";
 //   return resultsss;
 // };
 
+
  export default async function Search() {
   // const resultsss = await searchRes();
 
@@ -30,9 +31,26 @@ import Image from "next/image";
   const formatEndDate = format(new Date(endDate), "dd MMMM");
   const days = `${formatStartDate} - ${formatEndDate}`;
 
+  
+  
+    const resultss = await fetch("https://www.jsonkeeper.com/b/YVMX"
+    , {
+      method: 'GET',
+      // mode: 'no-cors',
+      // headers: {
+      //   "Access-Control-Allow-Headers" : "Content-Type",
+      //   "Access-Control-Allow-Origin": "*",
+      //   "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
+      // },
+    }
+    )
+    // .then((res)=>res.json);
 
-    const resultss = await fetch("https://www.jsonkeeper.com/b/YVMX");
-  const resultsss = await resultss.json();
+    const resultsss = await resultss.json();
+    console.log(resultsss);
+
+  // const resultsss = await resultss();
+  
   
 
   // const resultsss = await searchRes();

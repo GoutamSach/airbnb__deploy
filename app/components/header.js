@@ -80,6 +80,7 @@ function Header({ placeholder }) {
                   startDate: startDate.toISOString(),
                   endDate: endDate.toISOString(),
                   noOfGuests: noOfGuests,
+                  
                 },
               }}
             >

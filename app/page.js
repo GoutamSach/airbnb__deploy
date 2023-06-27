@@ -14,8 +14,11 @@ export default async function Home() {
   const data2 = await res2.json();
   const data22 = data2;
 
+ 
+
   return (
     <>
+    
       <Header />
       <Banner />
 
