@@ -17,10 +17,10 @@ function InfoCard({
   return (
     <div className="flex  flex-row mx-3 mb-5   space-x-3   cursor-pointer border-b  pb-2 first:border-t first:pt-5 md:space-x-7  hover:opacity-80 shadow-sm hover:shadow-md">
       <div
-        className="h-32 w-32  sm:h-40 sm:w-56 md:h-52 md:w-80
+        className="h-32 w-32  sm:h-40 sm:w-56 md:h-52 md:w-80 overflow-hidden
         relative flex-shrink-0"
       >
-        <Image src={img} fill alt={Key} />
+        <Image src={img} alt={Key} height={500} width={500} />
       </div>
 
       <div className=" text-xs  md:text-sm flex flex-col  cursor-pointer   flex-grow ">

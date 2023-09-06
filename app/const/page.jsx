@@ -1,0 +1,86 @@
+export const SearchResult = [
+  {
+    img: "https://links.papareact.com/xqj",
+    location: "Private room",
+    title: "Stay at this spacious Edwardian House",
+    description:
+      "1 guest · 1 bedroom · 1 bed · 1.5 shared bthrooms · Wifi · Kitchen · Free parking · Washing Machine",
+    star: 4.73,
+    price: "₹2599  / night",
+    total: "£117 total",
+    long: -0.0022275,
+    lat: 51.5421655,
+  },
+  {
+    img: "https://links.papareact.com/2io",
+    location: "Private room",
+    title: "Independant luxury studio apartment",
+    description:
+      "2 guest · 3 bedroom · 1 bed · 1.5 shared bthrooms · Wifi · Kitchen",
+    star: 4.3,
+    price: "₹2272 / night",
+    total: "£157 total",
+    long: -0.095091,
+    lat: 51.48695,
+  },
+  {
+    img: "https://links.papareact.com/uz7",
+    location: "Private room",
+    title: "Hayat Apartments",
+    description:
+      "4 guest · 4 bedroom · 4 bed · 2 bathrooms · Free parking · Washing Machine",
+    star: 3.8,
+    price: "₹2847 / night",
+    total: "£207 total",
+    long: -0.135638,
+    lat: 51.521916,
+  },
+  {
+    img: "https://links.papareact.com/6as",
+    location: "HomeStay",
+    title: "The Green Park",
+    description:
+      "1 guest · 1 bedroom · 1 bed · 1.5 shared bthrooms · Wifi · Kitchen · Free parking · Washing Machine",
+    star: 4.1,
+    price: "₹3274 / night",
+    total: "£320 total",
+    long: -0.069961,
+    lat: 51.472618,
+  },
+  {
+    img: "https://links.papareact.com/xhc",
+    location: "Dormitory",
+    title: "Spacious Peaceful Modern Bedroom",
+    description:
+      "3 guest · 1 bedroom · 1 bed · 1.5 shared bthrooms · Wifi · Free parking · Dry Cleaning",
+    star: 5,
+    price: "₹4217 / night",
+    total: "£450 total",
+    long: -0.08472,
+    lat: 51.510794,
+  },
+  {
+    img: "https://links.papareact.com/pro",
+    location: "Private room",
+    title: "The Blue Room",
+    description:
+      "2 guest · 1 bedroom · 1 bed · 1.5 shared bthrooms · Wifi · Washing Machine",
+    star: 4.23,
+    price: "₹2466 / night",
+    total: "£480 total",
+    long: -0.094116,
+    lat: 51.51401,
+  },
+  {
+    img: "https://links.papareact.com/8w2",
+    location: "Private room",
+    title: "5 Star Luxury Apartment",
+    description:
+      "3 guest · 1 bedroom · 1 bed · 1.5 shared bthrooms · Wifi · Kitchen · Free parking · Washing Machine",
+    star: 3.85,
+    price: "₹2578 / night",
+    total: "£650 total",
+    long: -0.109889,
+    lat: 51.521245,
+  },
+];

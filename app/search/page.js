@@ -1,12 +1,10 @@
 "use client";
 import { useSearchParams } from "next/navigation";
 import Footer from "../components/Footers";
-import Header from "../components/header";
-
-import { format } from "date-fns";
 import InfoCard from "../components/InfoCard";
-import Image from "next/image";
-
+import Header from "../components/header";
+import { SearchResult } from "../const/page";
+import { format } from "date-fns";
 
 // export default async function searchRes() {
 
@@ -18,8 +16,7 @@ import Image from "next/image";
 //   return resultsss;
 // };
 
-
- export default async function Search() {
+export default async function Search() {
   // const resultsss = await searchRes();
 
   const searchParams = useSearchParams();
@@ -31,27 +28,28 @@ import Image from "next/image";
   const formatEndDate = format(new Date(endDate), "dd MMMM");
   const days = `${formatStartDate} - ${formatEndDate}`;
 
-  
-  
-    const resultss = await fetch("https://www.jsonkeeper.com/b/YVMX"
-    , {
-      method: 'GET',
-      // mode: 'no-cors',
-      // headers: {
-      //   "Access-Control-Allow-Headers" : "Content-Type",
-      //   "Access-Control-Allow-Origin": "*",
-      //   "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
-      // },
-    }
-    )
-    // .then((res)=>res.json);
+  // const header = {
+  //   // method: "GET",
+  //   mode: "no-cors",
+  //   headers: {
+  //     "Access-Control-Allow-Headers": "Content-Type",
+  //     "Access-Control-Allow-Origin": "*",
+  //     "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
+  //   },
+  // };
 
-    const resultsss = await resultss.json();
-    console.log(resultsss);
+  // const resultss = await fetch(
+  //   "https://www.jsonkeeper.com/b/IJK5",
+  //   header
+  // ).then((res) => res.json());
+
+  // },
+  // .then((res)=>res.json);
+
+  // const resultsss = await resultss.json();
+  // console.log(resultss);
 
   // const resultsss = await resultss();
-  
-  
 
   // const resultsss = await searchRes();
 
@@ -85,7 +83,7 @@ import Image from "next/image";
           </button>
         </div>
         <div className=" ">
-          {resultsss?.map(
+          {SearchResult?.map(
             ({
               img,
               key,
@@ -117,6 +115,6 @@ import Image from "next/image";
 
 // export default Search;
 
-// https://jsonkeeper.com/b/Z5I9
+// https://www.jsonkeeper.com/b/YVMX
 // for indian currency https://www.jsonkeeper.com/b/YVMX
 // https://cors-anywhere.herokuapp.com/
