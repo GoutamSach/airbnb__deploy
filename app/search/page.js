@@ -3,7 +3,7 @@ import { useSearchParams } from "next/navigation";
 import Footer from "../components/Footers";
 import InfoCard from "../components/InfoCard";
 import Header from "../components/header";
-import { searchResult } from "../constant/page";
+import { searchResult } from "../components/constant";
 import { format } from "date-fns";
 
 export default async function Search() {
