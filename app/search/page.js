@@ -6,19 +6,7 @@ import Header from "../components/header";
 import { SearchResult } from "../constant/page";
 import { format } from "date-fns";
 
-// export default async function searchRes() {
-
-// };
-
-// const searchRes = async () => {
-//   const resultss = await fetch("https://www.jsonkeeper.com/b/YVMX");
-//   const resultsss = await resultss.json();
-//   return resultsss;
-// };
-
 export default async function Search() {
-  // const resultsss = await searchRes();
-
   const searchParams = useSearchParams();
   const locations = searchParams.get("locations");
   const startDate = searchParams.get("startDate");
@@ -27,31 +15,6 @@ export default async function Search() {
   const formatStartDate = format(new Date(startDate), "dd MMMM");
   const formatEndDate = format(new Date(endDate), "dd MMMM");
   const days = `${formatStartDate} - ${formatEndDate}`;
-
-  // const header = {
-  //   // method: "GET",
-  //   mode: "no-cors",
-  //   headers: {
-  //     "Access-Control-Allow-Headers": "Content-Type",
-  //     "Access-Control-Allow-Origin": "*",
-  //     "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
-  //   },
-  // };
-
-  // const resultss = await fetch(
-  //   "https://www.jsonkeeper.com/b/IJK5",
-  //   header
-  // ).then((res) => res.json());
-
-  // },
-  // .then((res)=>res.json);
-
-  // const resultsss = await resultss.json();
-  // console.log(resultss);
-
-  // const resultsss = await resultss();
-
-  // const resultsss = await searchRes();
 
   return (
     <div>
@@ -112,9 +75,3 @@ export default async function Search() {
     </div>
   );
 }
-
-// export default Search;
-
-// https://www.jsonkeeper.com/b/YVMX
-// for indian currency https://www.jsonkeeper.com/b/YVMX
-// https://cors-anywhere.herokuapp.com/
