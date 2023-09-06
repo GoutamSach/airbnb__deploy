@@ -1,4 +1,4 @@
-export default SearchResult = [
+export const searchResult = [
   {
     img: "https://links.papareact.com/xqj",
     location: "Private room",
